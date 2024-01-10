@@ -55,4 +55,8 @@ public interface VectorStore extends DocumentWriter {
 		return this.similaritySearch(SearchRequest.query(query));
 	}
 
+	List<Document> retrieve(String query);
+
+	List<Document> retrieve(String query, QueryOptions options);
+
 }
